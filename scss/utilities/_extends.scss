@@ -8,3 +8,16 @@
   margin: 0 auto;
   display: block;
 }
+
+
+
+// Transcript Style Extends
+
+%played {
+  color: $color--played;
+}
+
+%playing {
+  color: $color--playing;
+  font-weight: $font-weight--secondary;
+}

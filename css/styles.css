@@ -2,6 +2,13 @@
   margin: 0 auto;
   display: block; }
 
+.played {
+  color: #eee; }
+
+.playing {
+  color: #ffac0f;
+  font-weight: 600; }
+
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -394,12 +401,11 @@ template {
   display: none; }
 
 .transcript * {
-  font-family: "Source Code Pro", monospace; }
+  font-family: "Source Code Pro", monospace;
+  font-weight: 400; }
 
 .video-wrapper {
   max-width: 25.875em; }
-.video {
-  width: 100%; }
 
 .transcript-wrapper {
   width: 80%;

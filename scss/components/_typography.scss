@@ -5,5 +5,14 @@
 .transcript {
   & * {
     font-family: $font-family--primary;
+    font-weight: $font-weight--primary;
   }
+}
+
+.played {
+  @extend %played;
+}
+
+.playing {
+  @extend %playing;
 }
