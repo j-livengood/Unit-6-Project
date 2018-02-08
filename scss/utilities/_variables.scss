@@ -1,0 +1,27 @@
+// ==============================================================
+// GLOBAL VARIABLES
+// ==============================================================
+
+// Font Variables
+
+$font-url--google: "https://fonts.googleapis.com/css?family=Source+Code+Pro:400,600";
+$font-family--primary: 'Source Code Pro', monospace;
+
+$font-size--base: 16px;
+
+$font-weight--primary: 400;
+$font-weight--secondary: 500;
+
+
+
+// Color Variables
+
+$white: #fff;
+$grey: #ccc;
+$black: #000;
+$orange: #ffcc0d;
+
+$color--played: $grey;
+$color--playing: $orange;
+$color--unplayed: $black;
+$color--background: #edeff0;

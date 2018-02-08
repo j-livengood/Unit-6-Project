@@ -1,0 +1,21 @@
+// ==============================================================
+// FUNCTIONS
+// ==============================================================
+
+// Import Font
+
+@if variable-exists($font-url--google) {
+  @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:400,600');
+}
+
+
+
+// Convert to EMs
+
+@function em($target, $context: $font-size--base) {
+  @return ($target / $context) * 1em;
+}
+
+@function em($target, $context: $font-size--base) {
+  @return ($target / $context) * 1em;
+}
