@@ -4,7 +4,11 @@
 
 // Import Font
 
-@if variable-exists($font-url--google) {
+@if variable-exists($font-url--monospace) {
+  @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:400,600');
+}
+
+@if variable-exists($font-url--sans-serif) {
   @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:400,600');
 }
 

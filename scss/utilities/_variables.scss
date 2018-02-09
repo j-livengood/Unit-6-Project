@@ -4,8 +4,10 @@
 
 // Font Variables
 
-$font-url--google: "https://fonts.googleapis.com/css?family=Source+Code+Pro:400,600";
+$font-url--monospace: "https://fonts.googleapis.com/css?family=Source+Code+Pro:400,600";
+$font-url--sans-serif: "https://fonts.googleapis.com/css?family=Raleway:700";
 $font-family--primary: 'Source Code Pro', monospace;
+$font-family--secondary: 'Raleway', sans-serif;
 
 $font-size--base: 16px;
 
@@ -19,9 +21,16 @@ $font-weight--secondary: 600;
 $white: #fff;
 $grey: #eee;
 $black: #000;
-$orange: #ffac0f;
+$orange: #ef9c0f;
 
 $color--played: $grey;
 $color--playing: $orange;
 $color--unplayed: $black;
 $color--background: #edeff0;
+
+
+
+// Tablet Breakpoint
+
+$bp--tablet: 768px;
+$bp--desktop: 1322px;

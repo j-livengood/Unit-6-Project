@@ -1,28 +1,58 @@
-const video = document.querySelector('.video');
-const span = document.querySelectorAll('span');
-const transcript = document.querySelector('.transcript');
+// ==============================================================
+// JavaScript
+// ==============================================================
 
-const videoPlayer = new MediaElementPlayer(video, {
+// Variables
+
+const vid = document.querySelector('.video');
+const span = document.querySelectorAll('span');
+const script = document.querySelector('.transcript');
+const header = document.querySelector('.header-main');
+const screen = window.innerWidth;
+
+const vidPlayer = new MediaElementPlayer(vid, {
   pluginPath: "https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.7/mediaelement-and-player.min.js",
   shimScriptAccess: 'always',
   videoWidth: '100%',
   videoHeight: '100%',
-  features: ['playpause', 'progress', 'tracks', 'volume', 'fullscreen']
+  features: [
+    'playpause', 
+    'progress',
+    'tracks', 
+    'volume', 
+    'fullscreen']
 });
 
-video.addEventListener('timeupdate', () => {
-  for (let i = 0; i < span.length; i++) {
-    let currentTime = video.currentTime;
+
+
+// Functions
+
+function scriptUpdate() {
+  let currentTime = vid.currentTime;
+  
+  for (i = 0; i < span.length; i++) {
     let dataStart = span[i].getAttribute('data-start');
     let dataEnd = span[i].getAttribute('data-end');
     
-    if (dataStart <= currentTime && dataEnd >= currentTime) {
+    if (currentTime >= dataStart && currentTime <= dataEnd) {
       span[i].classList.add('playing');
-    } else if (dataEnd < currentTime) {
+    } else if (currentTime > dataEnd) {
       span[i].className = 'played';
     } else {
       span[i].className = '';
     }
   }
-});
+}
 
+function scriptJump(e) {
+  if (e.target.tagName === 'SPAN') {
+    vid.currentTime = e.target.getAttribute('data-start');
+  }
+}
+
+
+
+// Event Listeners
+
+vid.addEventListener('timeupdate', scriptUpdate);
+script.addEventListener('click', scriptJump);

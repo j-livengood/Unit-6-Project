@@ -1,4 +1,4 @@
-.video-wrapper, .transcript, .transcript-wrapper {
+.transcript, .transcript-wrapper, .video-wrapper {
   margin: 0 auto;
   display: block; }
 
@@ -394,35 +394,97 @@ template {
   display: none; }
 
 body {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -es-box-sizing: border-box;
+  box-sizing: border-box;
   background-color: #eee; }
+
+.content-wrapper {
+  height: 100%; }
+  @media (min-width: 768px) {
+    .content-wrapper {
+      margin-top: 1.125em; } }
+  @media (min-width: 1322px) {
+    .content-wrapper {
+      max-width: 82em;
+      margin: 2.25em auto;
+      display: flex;
+      justify-content: flex-end; } }
+
+.transcript {
+  width: 85%;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em; }
+  .transcript-wrapper {
+    width: 100%;
+    max-width: 25.875em; }
+    @media (min-width: 768px) {
+      .transcript-wrapper {
+        max-width: 43.75em; } }
 
 .transcript * {
   font-family: "Source Code Pro", monospace;
-  font-weight: 400; }
+  font-weight: 400;
+  transition: color .5s ease; }
 
 .played {
   color: #eee;
   font-weight: 400; }
 
 .playing {
-  color: #ffac0f;
+  color: #ef9c0f;
   font-weight: 600; }
 
 .video-wrapper {
+  min-width: 23.4375em;
   max-width: 25.875em; }
+  @media (min-width: 768px) {
+    .video-wrapper {
+      min-width: 43.75em; } }
+@media (min-width: 768px) {
+  .video {
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em; } }
+@media (min-width: 1322px) {
+  .video {
+    min-width: 43.75em;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0.5em; } }
 
-.transcript {
-  width: 90%;
-  padding-top: 1.5em;
-  padding-bottom: 1.5em; }
-  .transcript-wrapper {
-    background-color: #fff;
-    width: 100%;
-    max-width: 25.875em;
-    border-bottom-left-radius: 0.75em;
-    border-bottom-right-radius: 0.75em; }
-  .transcript span:hover {
-    cursor: pointer;
-    color: #ffac0f; }
+.transcript-wrapper {
+  background-color: #fff;
+  height: 100%; }
+  @media (min-width: 768px) {
+    .transcript-wrapper {
+      border-bottom-left-radius: 0.5em;
+      border-bottom-right-radius: 0.5em; } }
+  @media (min-width: 1322px) {
+    .transcript-wrapper {
+      min-height: 24.609375em;
+      border-bottom-left-radius: 0;
+      border-top-right-radius: 0.5em; } }
+.transcript span:hover {
+  cursor: pointer;
+  color: #ef9c0f; }
+
+.mejs__container {
+  font-family: "Raleway", sans-serif; }
+.mejs__controls {
+  opacity: 1;
+  background-color: #ef9c0f !important; }
+  @media (min-width: 1322px) {
+    .mejs__controls {
+      border-bottom-left-radius: 0.5em; } }
+.mejs__captions-layer {
+  font-size: 1.125em; }
+.mejs__time-handle-content {
+  background-color: #ef9c0f;
+  border-color: #ef9c0f;
+  height: 1.375em;
+  width: 1.375em;
+  top: -6px; }
 
 /*# sourceMappingURL=styles.css.map */

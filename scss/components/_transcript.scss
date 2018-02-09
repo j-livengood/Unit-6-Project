@@ -3,18 +3,18 @@
 // ==============================================================
 
 .transcript {
-  width: 90%;
-  padding-top: em(24px);
-  padding-bottom: em(24px);
-  @extend %centered;
-  
   &-wrapper {
     background-color: $white;
-    width: 100%;
-    max-width: em(414px);
-    @extend %centered;
-    border-bottom-left-radius: em(12px);
-    border-bottom-right-radius: em(12px);
+    height: 100%;
+    @include mq(tablet) {
+      border-bottom-left-radius: em(8px);
+      border-bottom-right-radius: em(8px);
+    }
+    @include mq(desktop) {
+      min-height: em(393.75px);
+      border-bottom-left-radius: 0;
+      border-top-right-radius: em(8px);
+    }
   }
   
   span:hover {

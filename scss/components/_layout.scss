@@ -1,0 +1,33 @@
+// ==============================================================
+// LAYOUT STYLES
+// ==============================================================
+
+.content {
+  &-wrapper {
+    height: 100%;
+    @include mq(tablet) {
+      margin-top: em(18px);
+    }
+    @include mq(desktop) {
+      max-width: em(1312px);
+      margin: em(36px) auto;
+      @include fb();
+    }
+  }
+}
+
+.transcript {
+  width: 85%;
+  padding-top: em(24px);
+  padding-bottom: em(24px);
+  @extend %centered;
+  
+  &-wrapper {
+    width: 100%;
+    max-width: em(414px);
+    @extend %centered;
+    @include mq(tablet) {
+      max-width: em(700px);
+    }
+  }
+}

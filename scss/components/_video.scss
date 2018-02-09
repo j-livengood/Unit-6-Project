@@ -4,11 +4,20 @@
 
 .video {
   &-wrapper {
+    min-width: em(375px);
     max-width: em(414px);
     @extend %centered;
+    @include mq(tablet) {
+      min-width: em(700px);
+    }
   }
-  
-  & {
-//    width: 100%;
+  @include mq(tablet) {
+    border-top-left-radius: em(8px);
+    border-top-right-radius: em(8px);
+  }
+  @include mq(desktop) {
+    min-width: em(700px);
+    border-top-right-radius: 0;
+    border-bottom-left-radius: em(8px);
   }
 }

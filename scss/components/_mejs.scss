@@ -1,0 +1,26 @@
+// ==============================================================
+// MEJS STYLES
+// ==============================================================
+
+.mejs {
+  @include e(container) {
+    font-family: $font-family--secondary;
+  }
+  @include e(controls) {
+    opacity: 1;
+    background-color: $orange !important;
+    @include mq(desktop) {
+      border-bottom-left-radius: em(8px);
+    }
+  }
+  @include e(captions-layer) {
+    font-size: em(18px);
+  }
+  @include e(time-handle-content) {
+    background-color: $orange;
+    border-color: $orange;
+    height: em(22px);
+    width: em(22px);
+    top: -6px;
+  }
+}
