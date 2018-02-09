@@ -3,9 +3,22 @@
 // ==============================================================
 
 .transcript {
+  width: 90%;
+  padding-top: em(24px);
+  padding-bottom: em(24px);
+  @extend %centered;
+  
   &-wrapper {
-    width: 80%;
-    max-width: em(400px);
+    background-color: $white;
+    width: 100%;
+    max-width: em(414px);
     @extend %centered;
+    border-bottom-left-radius: em(12px);
+    border-bottom-right-radius: em(12px);
+  }
+  
+  span:hover {
+    cursor: pointer;
+    color: $orange;
   }
 }

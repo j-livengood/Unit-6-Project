@@ -10,9 +10,11 @@
 }
 
 .played {
-  @extend %played;
+  color: $color--played;
+  font-weight: $font-weight--primary;
 }
 
 .playing {
-  @extend %playing;
+  color: $color--playing;
+  font-weight: $font-weight--secondary;
 }

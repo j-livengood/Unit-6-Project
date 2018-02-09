@@ -1,13 +1,6 @@
-.video-wrapper, .transcript-wrapper {
+.video-wrapper, .transcript, .transcript-wrapper {
   margin: 0 auto;
   display: block; }
-
-.played {
-  color: #eee; }
-
-.playing {
-  color: #ffac0f;
-  font-weight: 600; }
 
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -400,15 +393,36 @@ template {
 [hidden] {
   display: none; }
 
+body {
+  background-color: #eee; }
+
 .transcript * {
   font-family: "Source Code Pro", monospace;
   font-weight: 400; }
 
+.played {
+  color: #eee;
+  font-weight: 400; }
+
+.playing {
+  color: #ffac0f;
+  font-weight: 600; }
+
 .video-wrapper {
   max-width: 25.875em; }
 
-.transcript-wrapper {
-  width: 80%;
-  max-width: 25em; }
+.transcript {
+  width: 90%;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em; }
+  .transcript-wrapper {
+    background-color: #fff;
+    width: 100%;
+    max-width: 25.875em;
+    border-bottom-left-radius: 0.75em;
+    border-bottom-right-radius: 0.75em; }
+  .transcript span:hover {
+    cursor: pointer;
+    color: #ffac0f; }
 
 /*# sourceMappingURL=styles.css.map */
