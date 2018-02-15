@@ -4,7 +4,7 @@
 
 // Variables
 
-const vid = document.querySelector('.video');
+const vid = document.querySelector('video');
 const span = document.querySelectorAll('span');
 const script = document.querySelector('.transcript');
 const header = document.querySelector('.header-main');
@@ -29,7 +29,7 @@ const vidPlayer = new MediaElementPlayer(vid, {
 
 function scriptUpdate() {
   let currentTime = vid.currentTime;
-  
+  return currentTime;
   for (i = 0; i < span.length; i++) {
     let dataStart = span[i].getAttribute('data-start');
     let dataEnd = span[i].getAttribute('data-end');
@@ -56,3 +56,36 @@ function scriptJump(e) {
 
 vid.addEventListener('timeupdate', scriptUpdate);
 script.addEventListener('click', scriptJump);
+
+
+
+// Safari will not hear the timeupdate event
+// on the vid variable, but will hear the
+// timeupdate event on the mediaelementrapper.
+// This code is strictly for Safari.
+
+if (navigator.userAgent.indexOf('Safari') > -1) {
+  const mew = document.querySelector('mediaelementwrapper');
+
+mew.addEventListener('timeupdate', function() {
+  let currentTime = mew.currentTime;
+  for (let i = 0; i < span.length; i++) {
+    let dataStart = span[i].getAttribute('data-start');
+    let dataEnd = span[i].getAttribute('data-end');
+    
+    if (currentTime >= dataStart && currentTime <= dataEnd) {
+      span[i].classList.add('playing');
+    } else if (currentTime > dataEnd) {
+      span[i].className = 'played';
+    } else {
+      span[i].className = '';
+    }
+  }
+})
+
+script.addEventListener('click', function(e) {
+  if (e.target.tagName === 'SPAN') {
+    mew.currentTime = e.target.getAttribute('data-start');
+  }
+});
+}
