@@ -65,7 +65,6 @@ if (navigator.userAgent.indexOf('Chrome') > -1 || navigator.userAgent.indexOf('F
   // on the vid variable, but will hear the
   // timeupdate event on the mediaelementrapper.
   // This code is strictly for Safari.
-  // Also, I'm annoyed.
 
 } else if (navigator.userAgent.indexOf('Safari') > -1) {
   const mew = document.querySelector('mediaelementwrapper');
