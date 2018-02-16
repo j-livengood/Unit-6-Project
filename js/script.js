@@ -1,3 +1,5 @@
+console.log('safari');
+
 // ==============================================================
 // JavaScript
 // ==============================================================
@@ -66,7 +68,7 @@
   // This code is strictly for Safari.
 
 //} else 
-console.log('safari');
+
 if (navigator.userAgent.indexOf('Safari') > -1) {
   const mew = document.querySelector('mediaelementwrapper');
 
