@@ -66,8 +66,8 @@
   // This code is strictly for Safari.
 
 //} else 
+console.log('safari');
 if (navigator.userAgent.indexOf('Safari') > -1) {
-  console.log('safari');
   const mew = document.querySelector('mediaelementwrapper');
 
   mew.addEventListener('timeupdate', function() {
