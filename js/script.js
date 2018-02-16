@@ -2,6 +2,11 @@
 // JavaScript
 // ==============================================================
 
+
+// This conditional statement used to check for Chrome or Firefox
+// causes the Safari specific code at the bottom to break...
+// and I don't mean a little.
+
 //if (navigator.userAgent.indexOf('Chrome') > -1 || navigator.userAgent.indexOf('Firefox') > -1) {
 
   // Variables
