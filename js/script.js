@@ -31,8 +31,6 @@
 
   function scriptUpdate() {
     let currentTime = vid.currentTime;
-    console.log(currentTime);
-    return currentTime;
     for (i = 0; i < span.length; i++) {
       let dataStart = span[i].getAttribute('data-start');
       let dataEnd = span[i].getAttribute('data-end');
