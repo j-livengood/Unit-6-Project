@@ -2,7 +2,7 @@
 // JavaScript
 // ==============================================================
 
-if (navigator.userAgent.indexOf('Chrome') > -1 || navigator.userAgent.indexOf('Firefox') > -1) {
+//if (navigator.userAgent.indexOf('Chrome') > -1 || navigator.userAgent.indexOf('Firefox') > -1) {
 
   // Variables
 
@@ -66,7 +66,8 @@ if (navigator.userAgent.indexOf('Chrome') > -1 || navigator.userAgent.indexOf('F
   // timeupdate event on the mediaelementrapper.
   // This code is strictly for Safari.
 
-} else if (navigator.userAgent.indexOf('Safari') > -1) {
+//} else 
+  if (navigator.userAgent.indexOf('Safari') > -1) {
   const mew = document.querySelector('mediaelementwrapper');
 
   mew.addEventListener('timeupdate', function() {
