@@ -67,7 +67,8 @@
 
   // Safari will not hear the timeupdate event
   // on the vid variable, but will hear the
-  // timeupdate event on the mediaelementrapper.
+  // timeupdate event on the mediaelementrapper
+  // that MEJS adds around the video element.
   // This code is strictly for Safari.
 
 //} else 
