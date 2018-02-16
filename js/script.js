@@ -1,5 +1,3 @@
-console.log('safari');
-
 // ==============================================================
 // JavaScript
 // ==============================================================
@@ -74,7 +72,6 @@ if (navigator.userAgent.indexOf('Safari') > -1) {
 
   mew.addEventListener('timeupdate', function() {
     let currentTime = mew.currentTime;
-    console.log(currentTime);
     for (let i = 0; i < span.length; i++) {
       let dataStart = span[i].getAttribute('data-start');
       let dataEnd = span[i].getAttribute('data-end');
