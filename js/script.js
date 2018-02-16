@@ -14,8 +14,6 @@
   const vid = document.querySelector('video');
   const span = document.querySelectorAll('span');
   const script = document.querySelector('.transcript');
-  const header = document.querySelector('.header-main');
-  const screen = window.innerWidth;
 
   const vidPlayer = new MediaElementPlayer(vid, {
     pluginPath: "https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.7/mediaelement-and-player.min.js",
@@ -89,7 +87,7 @@
         span[i].className = '';
       }
     }
-  })
+  });
 
   script.addEventListener('click', function(e) {
     if (e.target.tagName === 'SPAN') {
