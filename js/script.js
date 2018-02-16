@@ -67,28 +67,28 @@
   // This code is strictly for Safari.
 
 //} else 
-  if (navigator.userAgent.indexOf('Safari') > -1) {
-  const mew = document.querySelector('mediaelementwrapper');
-
-  mew.addEventListener('timeupdate', function() {
-    let currentTime = mew.currentTime;
-    for (let i = 0; i < span.length; i++) {
-      let dataStart = span[i].getAttribute('data-start');
-      let dataEnd = span[i].getAttribute('data-end');
-
-      if (currentTime >= dataStart && currentTime <= dataEnd) {
-        span[i].classList.add('playing');
-      } else if (currentTime > dataEnd) {
-        span[i].className = 'played';
-      } else {
-        span[i].className = '';
-      }
-    }
-  })
-
-  script.addEventListener('click', function(e) {
-    if (e.target.tagName === 'SPAN') {
-      mew.currentTime = e.target.getAttribute('data-start');
-    }
-  });
-}
+//  if (navigator.userAgent.indexOf('Safari') > -1) {
+//  const mew = document.querySelector('mediaelementwrapper');
+//
+//  mew.addEventListener('timeupdate', function() {
+//    let currentTime = mew.currentTime;
+//    for (let i = 0; i < span.length; i++) {
+//      let dataStart = span[i].getAttribute('data-start');
+//      let dataEnd = span[i].getAttribute('data-end');
+//
+//      if (currentTime >= dataStart && currentTime <= dataEnd) {
+//        span[i].classList.add('playing');
+//      } else if (currentTime > dataEnd) {
+//        span[i].className = 'played';
+//      } else {
+//        span[i].className = '';
+//      }
+//    }
+//  })
+//
+//  script.addEventListener('click', function(e) {
+//    if (e.target.tagName === 'SPAN') {
+//      mew.currentTime = e.target.getAttribute('data-start');
+//    }
+//  });
+//}
